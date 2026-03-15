@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ================================================================
-  SITEMAP.XML — studentteckproject.in
+  SITEMAP.XML — studenttechprojects.in
   ================================================================
   HOW TO USE THIS SITEMAP:
 
@@ -26,7 +26,7 @@
 
   <!-- ============ HOMEPAGE ============ -->
   <url>
-    <loc>https://studentteckproject.in/</loc>
+    <loc>https://studenttechprojects.in/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -34,49 +34,49 @@
 
   <!-- ============ CATEGORY PAGES ============ -->
   <url>
-    <loc>https://studentteckproject.in/categories/ai-technology.html</loc>
+    <loc>https://studenttechprojects.in/categories/ai-technology.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/categories/internet-search-problems.html</loc>
+    <loc>https://studenttechprojects.in/categories/internet-search-problems.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/categories/deep-web-resources.html</loc>
+    <loc>https://studenttechprojects.in/categories/deep-web-resources.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/categories/government-data.html</loc>
+    <loc>https://studenttechprojects.in/categories/government-data.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/categories/research-databases.html</loc>
+    <loc>https://studenttechprojects.in/categories/research-databases.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/categories/student-opportunities.html</loc>
+    <loc>https://studenttechprojects.in/categories/student-opportunities.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/categories/internet-mysteries.html</loc>
+    <loc>https://studenttechprojects.in/categories/internet-mysteries.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -84,49 +84,49 @@
 
   <!-- ============ BLOG CATEGORY INDEX PAGES ============ -->
   <url>
-    <loc>https://studentteckproject.in/blog/ai-technology/</loc>
+    <loc>https://studenttechprojects.in/blog/ai-technology/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/blog/internet-search-problems/</loc>
+    <loc>https://studenttechprojects.in/blog/internet-search-problems/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/blog/deep-web/</loc>
+    <loc>https://studenttechprojects.in/blog/deep-web/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/blog/government-data/</loc>
+    <loc>https://studenttechprojects.in/blog/government-data/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/blog/research-databases/</loc>
+    <loc>https://studenttechprojects.in/blog/research-databases/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/blog/student-opportunities/</loc>
+    <loc>https://studenttechprojects.in/blog/student-opportunities/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://studentteckproject.in/blog/internet-mysteries/</loc>
+    <loc>https://studenttechprojects.in/blog/internet-mysteries/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -140,7 +140,7 @@
     Copy this block and fill in your article details:
 
     <url>
-      <loc>https://studentteckproject.in/blog/CATEGORY/ARTICLE-SLUG.html</loc>
+      <loc>https://studenttechprojects.in/blog/CATEGORY/ARTICLE-SLUG.html</loc>
       <lastmod>YYYY-MM-DD</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -156,7 +156,7 @@
 
   <!-- AI Technology Articles -->
   <url>
-    <loc>https://studentteckproject.in/blog/ai-technology/ai-agent-architecture.html</loc>
+    <loc>https://studenttechprojects.in/blog/ai-technology/ai-agent-architecture.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -164,7 +164,7 @@
 
   <!-- Research Database Articles -->
   <url>
-    <loc>https://studentteckproject.in/blog/research-databases/free-research-databases-students.html</loc>
+    <loc>https://studenttechprojects.in/blog/research-databases/free-research-databases-students.html</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -172,7 +172,7 @@
 
   <!-- Student Opportunities Articles -->
   <url>
-    <loc>https://studentteckproject.in/blog/student-opportunities/smart-india-hackathon-guide.html</loc>
+    <loc>https://studenttechprojects.in/blog/student-opportunities/smart-india-hackathon-guide.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

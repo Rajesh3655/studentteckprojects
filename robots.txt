@@ -1,4 +1,4 @@
-# robots.txt for studentteckproject.in
+# robots.txt for studenttechprojects.in
 # Generated for SEO blog website
 
 User-agent: *
@@ -8,4 +8,4 @@ Allow: /
 # Disallow: /drafts/
 
 # Sitemap location
-Sitemap: https://studentteckproject.in/sitemap.xml
+Sitemap: https://studenttechprojects.in/sitemap.xml
