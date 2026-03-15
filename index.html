@@ -47,7 +47,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -83,10 +83,11 @@
        HERO SECTION
        ========================================== -->
   <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-pattern" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-badge">🎓 For Students, By Students</div>
 
-      <h1 id="hero-heading">Your Complete Technology &amp; Research Knowledge Hub</h1>
+      <h1 id="hero-heading">Your Complete <span class="highlight">Technology &amp; Research</span> Knowledge Hub</h1>
 
       <p>Explore AI technology, deep web resources, government open data, research databases, internet mysteries, and student opportunities — all in one place.</p>
 
@@ -102,7 +103,7 @@
         </div>
         <div class="hero-stat">
           <span class="number">100+</span>
-          <span class="label">Articles (Growing)</span>
+          <span class="label">Articles</span>
         </div>
         <div class="hero-stat">
           <span class="number">Free</span>
@@ -133,6 +134,7 @@
     <section class="section" id="categories" aria-labelledby="categories-heading">
       <div class="container">
         <div class="section-header">
+          <span class="section-eyebrow">7 Topic Areas</span>
           <h2 id="categories-heading">Explore Knowledge Categories</h2>
           <p>Dive deep into specialized topics curated for students, researchers, and tech enthusiasts across India.</p>
         </div>
@@ -140,93 +142,93 @@
         <div class="categories-grid">
 
           <!-- CATEGORY 1: AI Technology -->
-          <article class="category-card" style="--cat-color: var(--cat-ai);">
-            <div class="cat-icon">🤖</div>
+          <article class="category-card" style="--cat-color: var(--cat-ai); --cat-bg: #f3e8ff;">
+            <div class="cat-icon-wrap"><span class="cat-icon">🤖</span></div>
             <div>
               <h3><a href="/categories/ai-technology.html">AI Technology</a></h3>
-              <p>Understand artificial intelligence, machine learning, neural networks, AI agents, and how they are reshaping education and industry.</p>
+              <p>Machine learning, neural networks, AI agents, and how artificial intelligence is reshaping education and industry.</p>
             </div>
             <div class="cat-meta">
-              <span class="article-count">Articles inside →</span>
               <span class="tag cat-ai">AI</span>
+              <span class="cat-arrow">→</span>
             </div>
           </article>
 
           <!-- CATEGORY 2: Internet Search Problems -->
-          <article class="category-card" style="--cat-color: var(--cat-search);">
-            <div class="cat-icon">🔍</div>
+          <article class="category-card" style="--cat-color: var(--cat-search); --cat-bg: #e0f7fa;">
+            <div class="cat-icon-wrap"><span class="cat-icon">🔍</span></div>
             <div>
               <h3><a href="/categories/internet-search-problems.html">Internet Search Problems</a></h3>
-              <p>Why search engines fail, search bias, filter bubbles, SEO manipulation, and how to find reliable information online effectively.</p>
+              <p>Filter bubbles, search bias, SEO manipulation, and how to find truly reliable information online.</p>
             </div>
             <div class="cat-meta">
-              <span class="article-count">Articles inside →</span>
               <span class="tag cat-search">Search</span>
+              <span class="cat-arrow">→</span>
             </div>
           </article>
 
           <!-- CATEGORY 3: Deep Web Resources -->
-          <article class="category-card" style="--cat-color: var(--cat-deep);">
-            <div class="cat-icon">🌐</div>
+          <article class="category-card" style="--cat-color: var(--cat-deep); --cat-bg: #dbeafe;">
+            <div class="cat-icon-wrap"><span class="cat-icon">🌐</span></div>
             <div>
               <h3><a href="/categories/deep-web-resources.html">Deep Web Resources</a></h3>
-              <p>Legitimate academic deep web databases, paywalled research access, digital libraries, and how to access hidden educational content.</p>
+              <p>Legitimate academic databases, paywalled research access, and digital libraries beyond the surface web.</p>
             </div>
             <div class="cat-meta">
-              <span class="article-count">Articles inside →</span>
               <span class="tag cat-deep">Deep Web</span>
+              <span class="cat-arrow">→</span>
             </div>
           </article>
 
           <!-- CATEGORY 4: Government Data -->
-          <article class="category-card" style="--cat-color: var(--cat-gov);">
-            <div class="cat-icon">🏛️</div>
+          <article class="category-card" style="--cat-color: var(--cat-gov); --cat-bg: #ccfbf1;">
+            <div class="cat-icon-wrap"><span class="cat-icon">🏛️</span></div>
             <div>
               <h3><a href="/categories/government-data.html">Government Data</a></h3>
-              <p>Open government datasets, data.gov.in, NSSO, census data, and how students can use public data for projects and research.</p>
+              <p>data.gov.in, NSSO, Census India, and using public datasets for student research projects.</p>
             </div>
             <div class="cat-meta">
-              <span class="article-count">Articles inside →</span>
               <span class="tag cat-gov">Gov Data</span>
+              <span class="cat-arrow">→</span>
             </div>
           </article>
 
           <!-- CATEGORY 5: Research Databases -->
-          <article class="category-card" style="--cat-color: var(--cat-research);">
-            <div class="cat-icon">📚</div>
+          <article class="category-card" style="--cat-color: var(--cat-research); --cat-bg: #fef3c7;">
+            <div class="cat-icon-wrap"><span class="cat-icon">📚</span></div>
             <div>
               <h3><a href="/categories/research-databases.html">Research Databases</a></h3>
-              <p>Free and paid research databases, how to access IEEE, PubMed, Scopus, Google Scholar, and tips for thorough literature reviews.</p>
+              <p>Free access to IEEE, PubMed, Scopus, Google Scholar, DOAJ, arXiv, and tips for literature reviews.</p>
             </div>
             <div class="cat-meta">
-              <span class="article-count">Articles inside →</span>
               <span class="tag cat-research">Research</span>
+              <span class="cat-arrow">→</span>
             </div>
           </article>
 
           <!-- CATEGORY 6: Student Opportunities -->
-          <article class="category-card" style="--cat-color: var(--cat-student);">
-            <div class="cat-icon">🎯</div>
+          <article class="category-card" style="--cat-color: var(--cat-student); --cat-bg: #dcfce7;">
+            <div class="cat-icon-wrap"><span class="cat-icon">🎯</span></div>
             <div>
               <h3><a href="/categories/student-opportunities.html">Student Opportunities</a></h3>
-              <p>Scholarships, hackathons, internships, research fellowships, government schemes, and competitions for students in India.</p>
+              <p>Scholarships, hackathons, internships, fellowships, and competitions curated for students in India.</p>
             </div>
             <div class="cat-meta">
-              <span class="article-count">Articles inside →</span>
               <span class="tag cat-student">Opportunities</span>
+              <span class="cat-arrow">→</span>
             </div>
           </article>
 
           <!-- CATEGORY 7: Internet Mysteries -->
-          <article class="category-card" style="--cat-color: var(--cat-mystery);">
-            <div class="cat-icon">🕵️</div>
+          <article class="category-card" style="--cat-color: var(--cat-mystery); --cat-bg: #fee2e2;">
+            <div class="cat-icon-wrap"><span class="cat-icon">🕵️</span></div>
             <div>
               <h3><a href="/categories/internet-mysteries.html">Internet Mysteries</a></h3>
-              <p>Unsolved internet mysteries, digital urban legends, forgotten websites, early internet history, and tech curiosities worth exploring.</p>
+              <p>Unsolved digital puzzles, forgotten websites, early internet history, and strange tech curiosities.</p>
             </div>
             <div class="cat-meta">
-              <span class="article-count">Articles inside →</span>
               <span class="tag cat-mystery">Mystery</span>
+              <span class="cat-arrow">→</span>
             </div>
           </article>
 
@@ -243,11 +245,12 @@
          3. Link href must point to the blog/[category]/[article-slug].html file
          4. Add newest articles at the TOP of this list
          ========================================== -->
-    <section class="section" style="background: var(--color-surface); border-top: 1px solid var(--color-border);" aria-labelledby="latest-heading">
+    <section class="section section-alt" aria-labelledby="latest-heading">
       <div class="container">
         <div class="section-header">
+          <span class="section-eyebrow">Fresh Content</span>
           <h2 id="latest-heading">Latest Articles</h2>
-          <p>Fresh knowledge added regularly. Bookmark this page and stay updated.</p>
+          <p>Manually written, research-backed articles added regularly. Bookmark and stay ahead.</p>
         </div>
 
         <div class="article-list">
@@ -315,29 +318,30 @@
     <section class="section" aria-labelledby="about-section-heading">
       <div class="container">
         <div class="section-header">
+          <span class="section-eyebrow">Why Us</span>
           <h2 id="about-section-heading">Why Student Tech Project Hub?</h2>
           <p>Built for learners who want more than what search engines surface.</p>
         </div>
 
         <div class="categories-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
-          <div class="category-card" style="--cat-color: var(--color-primary);">
-            <div class="cat-icon">✅</div>
-            <h3 style="font-size: 1.1rem;">Verified Information</h3>
+          <div class="feature-card">
+            <span class="feature-icon">✅</span>
+            <h3>Verified Information</h3>
             <p>Every article is manually written and reviewed — no auto-generated low-quality content.</p>
           </div>
-          <div class="category-card" style="--cat-color: var(--color-accent);">
-            <div class="cat-icon">🇮🇳</div>
-            <h3 style="font-size: 1.1rem;">India-Focused</h3>
-            <p>Curated with Indian students in mind — government schemes, local resources, and relevant opportunities.</p>
+          <div class="feature-card">
+            <span class="feature-icon">🇮🇳</span>
+            <h3>India-Focused</h3>
+            <p>Curated with Indian students in mind — government schemes, local resources, and opportunities.</p>
           </div>
-          <div class="category-card" style="--cat-color: var(--cat-student);">
-            <div class="cat-icon">📡</div>
-            <h3 style="font-size: 1.1rem;">Always Free</h3>
+          <div class="feature-card">
+            <span class="feature-icon">🔓</span>
+            <h3>Always Free</h3>
             <p>No paywalls, no subscriptions. Knowledge should be accessible to every student.</p>
           </div>
-          <div class="category-card" style="--cat-color: var(--cat-research);">
-            <div class="cat-icon">🔗</div>
-            <h3 style="font-size: 1.1rem;">Deep Linking</h3>
+          <div class="feature-card">
+            <span class="feature-icon">🔗</span>
+            <h3>Deep Linking</h3>
             <p>Every article links to primary sources so you can always dig deeper into the topic.</p>
           </div>
         </div>
