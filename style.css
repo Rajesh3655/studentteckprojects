@@ -6,7 +6,7 @@
 /* ============================================================
    1. GOOGLE FONTS IMPORT + CSS CUSTOM PROPERTIES
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 
 :root {
   /* Brand Colors */
@@ -22,8 +22,8 @@
   --color-surface-2:     #f8faff;
   --color-border:        #e2e8f4;
   --color-text:          #0f172a;
-  --color-text-muted:    #475569;
-  --color-text-light:    #94a3b8;
+  --color-text-muted:    #334155;
+  --color-text-light:    #475569;
 
   /* Category Colors */
   --cat-ai:              #7c3aed;
@@ -1155,3 +1155,5 @@ pre code { background: none; color: inherit; padding: 0; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .section { padding: 3rem 0; }
 }
+
+.article-body a { text-decoration: underline; font-weight: 500; color: var(--color-primary-dark); }

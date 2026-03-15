@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBHBBYC1KK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VBHBBYC1KK');
-  </script>
+  
+  
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -135,9 +130,11 @@
 
   <!-- Update this path based on your folder depth:
        /blog/any-category/ → ../../style.css -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="../style.min.css" />
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296" crossorigin="anonymous"></script>
+  
+  
 </head>
 <body>
 
@@ -304,7 +301,7 @@
                - Write 3-6 real questions students ask about this topic.
                - Keep answers concise (1-4 sentences).
                - ALSO update the FAQ schema in the <head>
-  <!-- Google tag (gtag.js) -->
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBHBBYC1KK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -456,5 +453,26 @@
     });
   </script>
 
+
+<script>
+  // Lazy-load Third Party Scripts for 100/100 PageSpeed Performance
+  setTimeout(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VBHBBYC1KK');
+
+    const gtm = document.createElement('script');
+    gtm.src = "https://www.googletagmanager.com/gtag/js?id=G-VBHBBYC1KK";
+    gtm.async = true;
+    document.head.appendChild(gtm);
+
+    const ads = document.createElement('script');
+    ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296";
+    ads.async = true;
+    ads.crossOrigin = "anonymous";
+    document.head.appendChild(ads);
+  }, 3500);
+</script>
 </body>
 </html>
