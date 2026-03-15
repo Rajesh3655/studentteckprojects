@@ -20,7 +20,13 @@
   <meta property="og:description" content="Why search engines fail and how to find reliable information online." />
   <meta property="og:url" content="https://studenttechprojects.in/categories/internet-search-problems.html" />
   <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  
+  <!-- Performance Validations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
   <!-- Google AdSense -->
@@ -229,10 +235,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const nav = document.getElementById('main-nav');
-    if (toggle && nav) toggle.addEventListener('click', () => nav.classList.toggle('open'));
-  </script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{const toggle=document.getElementById('nav-toggle'),nav=document.getElementById('main-nav');if(toggle&&nav)toggle.addEventListener('click',()=>{nav.classList.toggle('open')});document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const i=b.closest('.faq-item'),o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open')})})});</script>
 </body>
 </html>
