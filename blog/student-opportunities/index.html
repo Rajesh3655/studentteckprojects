@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Opportunities Blog – Student Tech Project Hub</title>
+  <meta name="description" content="All articles on student opportunities in India — scholarships, hackathons, internships, research fellowships, and government schemes for students." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://studentteckproject.in/blog/student-opportunities/" />
+  <meta property="og:title" content="Student Opportunities Blog – Student Tech Project Hub" />
+  <meta property="og:url" content="https://studentteckproject.in/blog/student-opportunities/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <span class="logo-text">Student Tech Project Hub</span>
+        <span class="logo-sub">studentteckproject.in</span>
+      </a>
+      <nav class="site-nav" id="main-nav">
+        <a href="/">Home</a>
+        <a href="/categories/ai-technology.html">AI</a>
+        <a href="/categories/research-databases.html">Research</a>
+        <a href="/categories/student-opportunities.html" class="active">Opportunities</a>
+        <a href="/categories/deep-web-resources.html">Deep Web</a>
+        <a href="/categories/government-data.html">Gov Data</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/categories/student-opportunities.html">Student Opportunities</a></li>
+        <li>All Articles</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="container">
+      <div style="padding: 2rem 0 1rem;">
+        <span class="tag cat-student" style="margin-bottom:1rem; display:inline-block;">🎯 Student Opportunities</span>
+        <h1>All Student Opportunities Articles</h1>
+        <p style="font-size:1.1rem; color:var(--color-text-muted); max-width:680px;">
+          Scholarships, hackathons, internships, research fellowships, government schemes,
+          and competitions curated for students across India.
+        </p>
+      </div>
+
+      <div class="site-content">
+        <div>
+          <!--
+            HOW TO ADD ARTICLES:
+            1. Copy an <article class="article-card"> block.
+            2. href → ./your-slug.html
+            3. Create file at: /blog/student-opportunities/your-slug.html
+            4. Add to /categories/student-opportunities.html and /index.html.
+            5. Add to /sitemap.xml.
+          -->
+          <div class="article-list">
+
+            <!-- Article 01 -->
+            <article class="article-card">
+              <div class="article-card-number">01</div>
+              <div class="article-card-body">
+                <div class="article-card-meta">
+                  <span class="tag cat-student">Student Opportunities</span>
+                  <time datetime="2026-03-12">March 12, 2026</time>
+                  <span>4 min read</span>
+                </div>
+                <h2 style="font-size:1.25rem;">
+                  <a href="./smart-india-hackathon-guide.html">Smart India Hackathon 2026: Complete Student Guide</a>
+                </h2>
+                <p class="excerpt">Everything you need to know about SIH 2026 — how to register, form your team, choose a problem statement, and maximize your chances of winning this prestigious competition.</p>
+                <a href="./smart-india-hackathon-guide.html" class="read-more">Read article →</a>
+              </div>
+            </article>
+
+            <!-- ═══ ADD MORE STUDENT OPPORTUNITY ARTICLES BELOW ═══ -->
+
+          </div><!-- /.article-list -->
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h4>All Categories</h4>
+            <ul>
+              <li><a href="/categories/ai-technology.html">🤖 AI Technology</a></li>
+              <li><a href="/categories/internet-search-problems.html">🔍 Internet Search Problems</a></li>
+              <li><a href="/categories/deep-web-resources.html">🌐 Deep Web Resources</a></li>
+              <li><a href="/categories/government-data.html">🏛️ Government Data</a></li>
+              <li><a href="/categories/research-databases.html">📚 Research Databases</a></li>
+              <li><a href="/categories/student-opportunities.html">🎯 Student Opportunities</a></li>
+              <li><a href="/categories/internet-mysteries.html">🕵️ Internet Mysteries</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h4>Opportunity Portals</h4>
+            <ul>
+              <li><a href="https://sih.gov.in" target="_blank" rel="noopener">Smart India Hackathon</a></li>
+              <li><a href="https://www.internshala.com" target="_blank" rel="noopener">Internshala</a></li>
+              <li><a href="https://www.aicte-india.org" target="_blank" rel="noopener">AICTE Schemes</a></li>
+              <li><a href="https://dst.gov.in" target="_blank" rel="noopener">DST Fellowships</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Student Tech Project Hub · <a href="https://studentteckproject.in">studentteckproject.in</a></p>
+        <p><a href="/">Home</a> · <a href="/sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const t = document.getElementById('nav-toggle'), n = document.getElementById('main-nav');
+    if (t && n) t.addEventListener('click', () => n.classList.toggle('open'));
+  </script>
+</body>
+</html>

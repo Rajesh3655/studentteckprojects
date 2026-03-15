@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ SEO Meta Tags -->
+  <title>Student Tech Project Hub – Technology, AI, Research & Student Opportunities</title>
+  <meta name="description" content="Student Tech Project Hub is your go-to knowledge hub for AI technology explanations, deep web resources, government data, research databases, internet mysteries, and student opportunities in India." />
+  <meta name="keywords" content="student tech project, AI technology, research databases, deep web resources, government data india, student opportunities, internet mysteries, technology blog students" />
+  <meta name="author" content="Student Tech Project Hub" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://studentteckproject.in/" />
+
+  <!-- ✅ Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Student Tech Project Hub – Technology, AI & Research for Students" />
+  <meta property="og:description" content="Explore AI technology, deep web resources, government data, research databases, and student opportunities all in one place." />
+  <meta property="og:url" content="https://studentteckproject.in/" />
+  <meta property="og:site_name" content="Student Tech Project Hub" />
+  <meta property="og:image" content="https://studentteckproject.in/assets/images/og-home.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Student Tech Project Hub" />
+  <meta name="twitter:description" content="Knowledge hub for AI, research, deep web, government data, and student opportunities." />
+  <meta name="twitter:image" content="https://studentteckproject.in/assets/images/og-home.png" />
+
+  <!-- ✅ Structured Data (Schema.org WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Student Tech Project Hub",
+    "url": "https://studentteckproject.in/",
+    "description": "A knowledge hub for technology, research resources, AI explanations, and student opportunities.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://studentteckproject.in/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       SITE HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="/" class="site-logo" aria-label="Student Tech Project Hub Home">
+        <span class="logo-text">Student Tech Project Hub</span>
+        <span class="logo-sub">studentteckproject.in</span>
+      </a>
+
+      <nav class="site-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="active">Home</a>
+        <a href="/categories/ai-technology.html">AI</a>
+        <a href="/categories/research-databases.html">Research</a>
+        <a href="/categories/student-opportunities.html">Opportunities</a>
+        <a href="/categories/deep-web-resources.html">Deep Web</a>
+        <a href="/categories/government-data.html">Gov Data</a>
+        <a href="/blog/article-template.html" class="btn btn-primary" style="padding:0.45rem 1rem;">Write / Contribute</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-badge">🎓 For Students, By Students</div>
+
+      <h1 id="hero-heading">Your Complete Technology &amp; Research Knowledge Hub</h1>
+
+      <p>Explore AI technology, deep web resources, government open data, research databases, internet mysteries, and student opportunities — all in one place.</p>
+
+      <div class="hero-actions">
+        <a href="#categories" class="btn btn-white">Browse Categories</a>
+        <a href="/categories/ai-technology.html" class="btn btn-ghost">Explore AI Technology →</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="number">7</span>
+          <span class="label">Categories</span>
+        </div>
+        <div class="hero-stat">
+          <span class="number">100+</span>
+          <span class="label">Articles (Growing)</span>
+        </div>
+        <div class="hero-stat">
+          <span class="number">Free</span>
+          <span class="label">Always</span>
+        </div>
+        <div class="hero-stat">
+          <span class="number">SEO</span>
+          <span class="label">Optimized</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main id="main" role="main">
+
+    <!-- ==========================================
+         ALL CATEGORIES SECTION
+         ==========================================
+         HOW TO ADD A NEW CATEGORY:
+         1. Add a new <article class="category-card"> block below
+         2. Create a matching HTML file in /categories/
+         3. Create a matching folder in /blog/
+         4. Add it to sitemap.xml
+         ========================================== -->
+    <section class="section" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="categories-heading">Explore Knowledge Categories</h2>
+          <p>Dive deep into specialized topics curated for students, researchers, and tech enthusiasts across India.</p>
+        </div>
+
+        <div class="categories-grid">
+
+          <!-- CATEGORY 1: AI Technology -->
+          <article class="category-card" style="--cat-color: var(--cat-ai);">
+            <div class="cat-icon">🤖</div>
+            <div>
+              <h3><a href="/categories/ai-technology.html">AI Technology</a></h3>
+              <p>Understand artificial intelligence, machine learning, neural networks, AI agents, and how they are reshaping education and industry.</p>
+            </div>
+            <div class="cat-meta">
+              <span class="article-count">Articles inside →</span>
+              <span class="tag cat-ai">AI</span>
+            </div>
+          </article>
+
+          <!-- CATEGORY 2: Internet Search Problems -->
+          <article class="category-card" style="--cat-color: var(--cat-search);">
+            <div class="cat-icon">🔍</div>
+            <div>
+              <h3><a href="/categories/internet-search-problems.html">Internet Search Problems</a></h3>
+              <p>Why search engines fail, search bias, filter bubbles, SEO manipulation, and how to find reliable information online effectively.</p>
+            </div>
+            <div class="cat-meta">
+              <span class="article-count">Articles inside →</span>
+              <span class="tag cat-search">Search</span>
+            </div>
+          </article>
+
+          <!-- CATEGORY 3: Deep Web Resources -->
+          <article class="category-card" style="--cat-color: var(--cat-deep);">
+            <div class="cat-icon">🌐</div>
+            <div>
+              <h3><a href="/categories/deep-web-resources.html">Deep Web Resources</a></h3>
+              <p>Legitimate academic deep web databases, paywalled research access, digital libraries, and how to access hidden educational content.</p>
+            </div>
+            <div class="cat-meta">
+              <span class="article-count">Articles inside →</span>
+              <span class="tag cat-deep">Deep Web</span>
+            </div>
+          </article>
+
+          <!-- CATEGORY 4: Government Data -->
+          <article class="category-card" style="--cat-color: var(--cat-gov);">
+            <div class="cat-icon">🏛️</div>
+            <div>
+              <h3><a href="/categories/government-data.html">Government Data</a></h3>
+              <p>Open government datasets, data.gov.in, NSSO, census data, and how students can use public data for projects and research.</p>
+            </div>
+            <div class="cat-meta">
+              <span class="article-count">Articles inside →</span>
+              <span class="tag cat-gov">Gov Data</span>
+            </div>
+          </article>
+
+          <!-- CATEGORY 5: Research Databases -->
+          <article class="category-card" style="--cat-color: var(--cat-research);">
+            <div class="cat-icon">📚</div>
+            <div>
+              <h3><a href="/categories/research-databases.html">Research Databases</a></h3>
+              <p>Free and paid research databases, how to access IEEE, PubMed, Scopus, Google Scholar, and tips for thorough literature reviews.</p>
+            </div>
+            <div class="cat-meta">
+              <span class="article-count">Articles inside →</span>
+              <span class="tag cat-research">Research</span>
+            </div>
+          </article>
+
+          <!-- CATEGORY 6: Student Opportunities -->
+          <article class="category-card" style="--cat-color: var(--cat-student);">
+            <div class="cat-icon">🎯</div>
+            <div>
+              <h3><a href="/categories/student-opportunities.html">Student Opportunities</a></h3>
+              <p>Scholarships, hackathons, internships, research fellowships, government schemes, and competitions for students in India.</p>
+            </div>
+            <div class="cat-meta">
+              <span class="article-count">Articles inside →</span>
+              <span class="tag cat-student">Opportunities</span>
+            </div>
+          </article>
+
+          <!-- CATEGORY 7: Internet Mysteries -->
+          <article class="category-card" style="--cat-color: var(--cat-mystery);">
+            <div class="cat-icon">🕵️</div>
+            <div>
+              <h3><a href="/categories/internet-mysteries.html">Internet Mysteries</a></h3>
+              <p>Unsolved internet mysteries, digital urban legends, forgotten websites, early internet history, and tech curiosities worth exploring.</p>
+            </div>
+            <div class="cat-meta">
+              <span class="article-count">Articles inside →</span>
+              <span class="tag cat-mystery">Mystery</span>
+            </div>
+          </article>
+
+        </div><!-- /.categories-grid -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         LATEST ARTICLES SECTION
+         ==========================================
+         HOW TO SHOW YOUR LATEST ARTICLES:
+         1. Copy one of the <article class="article-card"> blocks below
+         2. Update title, excerpt, link, tag, and date
+         3. Link href must point to the blog/[category]/[article-slug].html file
+         4. Add newest articles at the TOP of this list
+         ========================================== -->
+    <section class="section" style="background: var(--color-surface); border-top: 1px solid var(--color-border);" aria-labelledby="latest-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="latest-heading">Latest Articles</h2>
+          <p>Fresh knowledge added regularly. Bookmark this page and stay updated.</p>
+        </div>
+
+        <div class="article-list">
+
+          <!-- ── ADD NEW ARTICLES BELOW THIS LINE ─────────────────────────── -->
+
+          <!-- SAMPLE ARTICLE 1 — Update or remove this sample -->
+          <article class="article-card">
+            <div class="article-card-number">01</div>
+            <div class="article-card-body">
+              <div class="article-card-meta">
+                <span class="tag cat-ai">AI Technology</span>
+                <time datetime="2026-03-15">March 15, 2026</time>
+                <span>5 min read</span>
+              </div>
+              <h3><a href="/blog/ai-technology/ai-agent-architecture.html">How AI Agents Work: Architecture Explained Simply</a></h3>
+              <p class="excerpt">AI agents are autonomous systems that perceive, reason, and act. This article breaks down the architecture of modern AI agents — from perception layers to decision engines — with clear examples for students.</p>
+              <a href="/blog/ai-technology/ai-agent-architecture.html" class="read-more">Read article →</a>
+            </div>
+          </article>
+
+          <!-- SAMPLE ARTICLE 2 — Update or remove this sample -->
+          <article class="article-card">
+            <div class="article-card-number">02</div>
+            <div class="article-card-body">
+              <div class="article-card-meta">
+                <span class="tag cat-research">Research Databases</span>
+                <time datetime="2026-03-14">March 14, 2026</time>
+                <span>7 min read</span>
+              </div>
+              <h3><a href="/blog/research-databases/free-research-databases-students.html">10 Free Research Databases Every Indian Student Should Know</a></h3>
+              <p class="excerpt">From DOAJ and PubMed Central to Sci-Hub alternatives and NDLTD — discover the best legitimate free academic databases you can access without a university login.</p>
+              <a href="/blog/research-databases/free-research-databases-students.html" class="read-more">Read article →</a>
+            </div>
+          </article>
+
+          <!-- SAMPLE ARTICLE 3 — Update or remove this sample -->
+          <article class="article-card">
+            <div class="article-card-number">03</div>
+            <div class="article-card-body">
+              <div class="article-card-meta">
+                <span class="tag cat-student">Student Opportunities</span>
+                <time datetime="2026-03-12">March 12, 2026</time>
+                <span>4 min read</span>
+              </div>
+              <h3><a href="/blog/student-opportunities/smart-india-hackathon-guide.html">Smart India Hackathon 2026: Complete Student Guide</a></h3>
+              <p class="excerpt">Everything you need to know about SIH 2026 — how to register, form your team, choose a problem statement, and maximize your chances of winning this prestigious competition.</p>
+              <a href="/blog/student-opportunities/smart-india-hackathon-guide.html" class="read-more">Read article →</a>
+            </div>
+          </article>
+
+          <!-- ── ADD NEW ARTICLES ABOVE THIS LINE ─────────────────────────── -->
+
+        </div><!-- /.article-list -->
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="/categories/ai-technology.html" class="btn btn-outline">Browse All Articles →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         WHY STUDENT TECH PROJECT HUB
+         ========================================== -->
+    <section class="section" aria-labelledby="about-section-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-section-heading">Why Student Tech Project Hub?</h2>
+          <p>Built for learners who want more than what search engines surface.</p>
+        </div>
+
+        <div class="categories-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+          <div class="category-card" style="--cat-color: var(--color-primary);">
+            <div class="cat-icon">✅</div>
+            <h3 style="font-size: 1.1rem;">Verified Information</h3>
+            <p>Every article is manually written and reviewed — no auto-generated low-quality content.</p>
+          </div>
+          <div class="category-card" style="--cat-color: var(--color-accent);">
+            <div class="cat-icon">🇮🇳</div>
+            <h3 style="font-size: 1.1rem;">India-Focused</h3>
+            <p>Curated with Indian students in mind — government schemes, local resources, and relevant opportunities.</p>
+          </div>
+          <div class="category-card" style="--cat-color: var(--cat-student);">
+            <div class="cat-icon">📡</div>
+            <h3 style="font-size: 1.1rem;">Always Free</h3>
+            <p>No paywalls, no subscriptions. Knowledge should be accessible to every student.</p>
+          </div>
+          <div class="category-card" style="--cat-color: var(--cat-research);">
+            <div class="cat-icon">🔗</div>
+            <h3 style="font-size: 1.1rem;">Deep Linking</h3>
+            <p>Every article links to primary sources so you can always dig deeper into the topic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /#main -->
+
+  <!-- ==========================================
+       SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <span class="logo-text">Student Tech Project Hub</span>
+          <p>A knowledge hub for technology, AI explanations, research resources, and student opportunities at <strong>studentteckproject.in</strong>.</p>
+          <p style="font-size:0.8rem; margin-top:0.5rem;">Domain: studentteckproject.in</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="/categories/ai-technology.html">AI Technology</a></li>
+            <li><a href="/categories/internet-search-problems.html">Internet Search</a></li>
+            <li><a href="/categories/deep-web-resources.html">Deep Web Resources</a></li>
+            <li><a href="/categories/government-data.html">Government Data</a></li>
+            <li><a href="/categories/research-databases.html">Research Databases</a></li>
+            <li><a href="/categories/student-opportunities.html">Student Opportunities</a></li>
+            <li><a href="/categories/internet-mysteries.html">Internet Mysteries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sitemap.xml">Sitemap</a></li>
+            <li><a href="/blog/article-template.html">Article Template</a></li>
+            <li><a href="/robots.txt">robots.txt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="https://data.gov.in" target="_blank" rel="noopener">data.gov.in</a></li>
+            <li><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a></li>
+            <li><a href="https://sih.gov.in" target="_blank" rel="noopener">Smart India Hackathon</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer-grid -->
+
+      <div class="footer-bottom">
+        <p>© 2026 Student Tech Project Hub · <a href="https://studentteckproject.in">studentteckproject.in</a></p>
+        <p>Built for Indian students · Static SEO Site · Free to Use</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MINIMAL JAVASCRIPT — Mobile Nav Toggle
+       ========================================== -->
+  <script>
+    // Mobile navigation toggle
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  </script>
+
+</body>
+</html>

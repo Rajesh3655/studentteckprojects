@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Government Data Blog – Student Tech Project Hub</title>
+  <meta name="description" content="All articles on government open data for Indian students — data.gov.in, NSSO, Census India, RBI datasets, and how to use them for research projects." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://studentteckproject.in/blog/government-data/" />
+  <meta property="og:title" content="Government Data Blog – Student Tech Project Hub" />
+  <meta property="og:url" content="https://studentteckproject.in/blog/government-data/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <span class="logo-text">Student Tech Project Hub</span>
+        <span class="logo-sub">studentteckproject.in</span>
+      </a>
+      <nav class="site-nav" id="main-nav">
+        <a href="/">Home</a>
+        <a href="/categories/ai-technology.html">AI</a>
+        <a href="/categories/research-databases.html">Research</a>
+        <a href="/categories/student-opportunities.html">Opportunities</a>
+        <a href="/categories/deep-web-resources.html">Deep Web</a>
+        <a href="/categories/government-data.html" class="active">Gov Data</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/categories/government-data.html">Government Data</a></li>
+        <li>All Articles</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="container">
+      <div style="padding: 2rem 0 1rem;">
+        <span class="tag cat-gov" style="margin-bottom:1rem; display:inline-block;">🏛️ Government Data</span>
+        <h1>All Government Data Articles</h1>
+        <p style="font-size:1.1rem; color:var(--color-text-muted); max-width:680px;">
+          Guides on using Indian government open datasets — data.gov.in, NSSO, Census India,
+          MOSPI, RBI, and more — for student research and analysis projects.
+        </p>
+      </div>
+
+      <div class="site-content">
+        <div>
+          <!--
+            HOW TO ADD ARTICLES:
+            1. Copy an <article class="article-card"> block.
+            2. href → ./your-slug.html
+            3. Create file at: /blog/government-data/your-slug.html
+            4. Add to /categories/government-data.html and /index.html.
+            5. Add to /sitemap.xml.
+          -->
+          <div class="article-list">
+            <div style="padding:3rem; text-align:center; background:var(--color-surface); border:2px dashed var(--color-border); border-radius:var(--radius-xl); color:var(--color-text-muted);">
+              <div style="font-size:3rem; margin-bottom:1rem;">📝</div>
+              <h3 style="color:var(--color-text-muted);">No Articles Yet</h3>
+              <p>Create your first article:<br><code>blog/government-data/your-article-slug.html</code></p>
+              <p style="margin-top:1rem; font-size:0.875rem;">Copy <a href="/blog/article-template.html"><code>blog/article-template.html</code></a> as your starting point.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h4>All Categories</h4>
+            <ul>
+              <li><a href="/categories/ai-technology.html">🤖 AI Technology</a></li>
+              <li><a href="/categories/internet-search-problems.html">🔍 Internet Search Problems</a></li>
+              <li><a href="/categories/deep-web-resources.html">🌐 Deep Web Resources</a></li>
+              <li><a href="/categories/government-data.html">🏛️ Government Data</a></li>
+              <li><a href="/categories/research-databases.html">📚 Research Databases</a></li>
+              <li><a href="/categories/student-opportunities.html">🎯 Student Opportunities</a></li>
+              <li><a href="/categories/internet-mysteries.html">🕵️ Internet Mysteries</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h4>Official Data Portals</h4>
+            <ul>
+              <li><a href="https://data.gov.in" target="_blank" rel="noopener">data.gov.in</a></li>
+              <li><a href="https://mospi.gov.in" target="_blank" rel="noopener">MOSPI</a></li>
+              <li><a href="https://censusindia.gov.in" target="_blank" rel="noopener">Census India</a></li>
+              <li><a href="https://rbi.org.in" target="_blank" rel="noopener">RBI Database</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Student Tech Project Hub · <a href="https://studentteckproject.in">studentteckproject.in</a></p>
+        <p><a href="/">Home</a> · <a href="/sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const t = document.getElementById('nav-toggle'), n = document.getElementById('main-nav');
+    if (t && n) t.addEventListener('click', () => n.classList.toggle('open'));
+  </script>
+</body>
+</html>

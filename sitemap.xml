@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ================================================================
+  SITEMAP.XML — studentteckproject.in
+  ================================================================
+  HOW TO USE THIS SITEMAP:
+
+  1. This file lists every public URL on your website.
+  2. Submit it to Google Search Console:
+     https://search.google.com/search-console
+     → Sitemaps → Enter: sitemap.xml → Submit
+
+  3. HOW TO ADD NEW ARTICLES:
+     Copy the <url> block template below and:
+     - Update <loc> with the full URL of your new article
+     - Update <lastmod> with today's date (YYYY-MM-DD)
+     - Set <priority> (0.8 for articles, 0.6 for categories, 1.0 for homepage)
+     - Set <changefreq> (monthly for articles, weekly for homepage)
+
+  4. Keep this file updated whenever you add new articles.
+  ================================================================
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ============ HOMEPAGE ============ -->
+  <url>
+    <loc>https://studentteckproject.in/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ============ CATEGORY PAGES ============ -->
+  <url>
+    <loc>https://studentteckproject.in/categories/ai-technology.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/categories/internet-search-problems.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/categories/deep-web-resources.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/categories/government-data.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/categories/research-databases.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/categories/student-opportunities.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/categories/internet-mysteries.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============ BLOG CATEGORY INDEX PAGES ============ -->
+  <url>
+    <loc>https://studentteckproject.in/blog/ai-technology/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/blog/internet-search-problems/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/blog/deep-web/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/blog/government-data/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/blog/research-databases/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/blog/student-opportunities/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studentteckproject.in/blog/internet-mysteries/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============ ARTICLES ============ -->
+  <!--
+    ══════════════════════════════════════════════════════════
+    ✍️  HOW TO ADD YOUR NEW ARTICLES TO THE SITEMAP
+    ══════════════════════════════════════════════════════════
+    Copy this block and fill in your article details:
+
+    <url>
+      <loc>https://studentteckproject.in/blog/CATEGORY/ARTICLE-SLUG.html</loc>
+      <lastmod>YYYY-MM-DD</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    Replace CATEGORY with one of:
+      ai-technology | internet-search-problems | deep-web |
+      government-data | research-databases | student-opportunities | internet-mysteries
+
+    Replace ARTICLE-SLUG with your article filename (without .html)
+    ══════════════════════════════════════════════════════════
+  -->
+
+  <!-- AI Technology Articles -->
+  <url>
+    <loc>https://studentteckproject.in/blog/ai-technology/ai-agent-architecture.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Research Database Articles -->
+  <url>
+    <loc>https://studentteckproject.in/blog/research-databases/free-research-databases-students.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Student Opportunities Articles -->
+  <url>
+    <loc>https://studentteckproject.in/blog/student-opportunities/smart-india-hackathon-guide.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!--
+    ══════════════════════════════════════════════════════════
+    ADD MORE ARTICLES ABOVE THIS LINE
+    ══════════════════════════════════════════════════════════
+  -->
+
+</urlset>

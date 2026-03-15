@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How AI Agents Work: Architecture Explained Simply – Student Tech Project Hub</title>
+  <meta name="description" content="A beginner-friendly breakdown of how AI agents work — covering perception, reasoning, memory, and action layers. Perfect for students learning about artificial intelligence." />
+  <meta name="keywords" content="AI agent architecture, how AI agents work, artificial intelligence students, AI perception reasoning action, autonomous AI systems, AI tutorial 2026" />
+  <meta name="author" content="Student Tech Project Hub" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://studentteckproject.in/blog/ai-technology/ai-agent-architecture.html" />
+  <meta property="article:published_time" content="2026-03-15T00:00:00+05:30" />
+  <meta property="article:modified_time" content="2026-03-15T00:00:00+05:30" />
+  <meta property="article:section" content="AI Technology" />
+  <meta property="article:tag" content="AI Agents" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How AI Agents Work: Architecture Explained Simply" />
+  <meta property="og:description" content="Understand AI agent architecture — perception, reasoning, memory, and action — explained simply for students." />
+  <meta property="og:url" content="https://studentteckproject.in/blog/ai-technology/ai-agent-architecture.html" />
+  <meta property="og:site_name" content="Student Tech Project Hub" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How AI Agents Work: Architecture Explained Simply" />
+  <meta name="twitter:description" content="Understand AI agent architecture explained simply for students." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How AI Agents Work: Architecture Explained Simply",
+    "description": "A beginner-friendly breakdown of how AI agents work — covering perception, reasoning, memory, and action layers.",
+    "author": { "@type": "Organization", "name": "Student Tech Project Hub" },
+    "publisher": { "@type": "Organization", "name": "Student Tech Project Hub", "url": "https://studentteckproject.in" },
+    "datePublished": "2026-03-15",
+    "dateModified": "2026-03-15",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://studentteckproject.in/blog/ai-technology/ai-agent-architecture.html" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an AI agent?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An AI agent is an autonomous system that perceives its environment, processes information, makes decisions, and takes actions to achieve a goal — without needing step-by-step human instructions." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main components of an AI agent?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A modern AI agent typically has four core components: a Perception Layer (reads input), a Reasoning Engine (processes and decides), a Memory Module (stores context), and an Action Layer (executes outputs or tools)." }
+      },
+      {
+        "@type": "Question",
+        "name": "How are AI agents different from chatbots?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Chatbots respond to single queries. AI agents can plan multi-step tasks, use external tools (like web search or code execution), and remember context across an entire session or workflow." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <span class="logo-text">Student Tech Project Hub</span>
+        <span class="logo-sub">studentteckproject.in</span>
+      </a>
+      <nav class="site-nav" id="main-nav">
+        <a href="/">Home</a>
+        <a href="/categories/ai-technology.html" class="active">AI</a>
+        <a href="/categories/research-databases.html">Research</a>
+        <a href="/categories/student-opportunities.html">Opportunities</a>
+        <a href="/categories/deep-web-resources.html">Deep Web</a>
+        <a href="/categories/government-data.html">Gov Data</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/categories/ai-technology.html">AI Technology</a></li>
+        <li>AI Agent Architecture</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="container">
+      <div class="site-content">
+
+        <article aria-labelledby="article-title">
+
+          <header class="article-header">
+            <div style="margin-bottom: 1rem;">
+              <a href="/categories/ai-technology.html" class="tag cat-ai">🤖 AI Technology</a>
+            </div>
+            <h1 id="article-title">How AI Agents Work: Architecture Explained Simply for Students</h1>
+            <div class="article-meta">
+              <div class="author">
+                <div class="author-avatar">S</div>
+                <span>By Student Tech Project Hub</span>
+              </div>
+              <time datetime="2026-03-15">March 15, 2026</time>
+              <span>5 min read</span>
+              <span>Last updated: March 15, 2026</span>
+            </div>
+          </header>
+
+          <div class="article-body">
+
+            <div class="intro-box">
+              AI agents are one of the most exciting developments in modern technology — but most explanations are filled with jargon. This article breaks down the architecture of an AI agent into four simple layers that any student can understand, even without a computer science background.
+            </div>
+
+            <h2 id="what-is-ai-agent">What is an AI Agent?</h2>
+            <p>An <strong>AI agent</strong> is a software system that can <em>perceive its environment</em>, <em>reason</em> about what it observes, <em>remembers</em> past interactions, and <em>take actions</em> to achieve a goal — all without being told exactly what to do at every step.</p>
+            <p>Think of it this way: a traditional program follows fixed instructions. An AI agent observes a situation, thinks about it, and decides the best next action on its own. That's what makes AI agents "autonomous."</p>
+            <p>Modern AI agents power tools like ChatGPT (when it browses the web), GitHub Copilot (when it writes and edits code), and research assistants that can read papers and summarize findings automatically.</p>
+
+            <h2 id="four-layers">The 4-Layer Architecture of an AI Agent</h2>
+            <p>Most modern AI agents — regardless of whether they are built with GPT-4, Gemini, or Claude — share a common underlying architecture with four key layers:</p>
+
+            <h3>Layer 1: Perception (Input)</h3>
+            <p>The perception layer is how the agent <strong>reads the world</strong>. It takes in raw inputs and converts them into a format the agent's brain can process.</p>
+            <ul>
+              <li>Text inputs (user messages, documents, web pages)</li>
+              <li>Image inputs (screenshots, photos if the model is multimodal)</li>
+              <li>Data inputs (structured tables, API results, database queries)</li>
+              <li>Tool outputs (results from code execution, web searches, file reads)</li>
+            </ul>
+            <p>Without a good perception layer, the agent can't know what's happening in the world it's supposed to act in.</p>
+
+            <h3>Layer 2: Reasoning Engine (Brain)</h3>
+            <p>This is the core of the agent — usually a Large Language Model (LLM) like GPT-4o or Gemini. The reasoning engine:</p>
+            <ol>
+              <li><strong>Interprets</strong> the input from the perception layer</li>
+              <li><strong>Plans</strong> a sequence of steps to achieve the goal</li>
+              <li><strong>Decides</strong> which tool or action to use next</li>
+              <li><strong>Generates</strong> text, code, or structured outputs</li>
+            </ol>
+            <p>Modern agents use a loop called <strong>ReAct</strong> (Reason + Act): the agent reasons about what to do → takes an action → observes the result → reasons again. This loop continues until the task is complete.</p>
+
+            <h3>Layer 3: Memory</h3>
+            <p>Memory allows the agent to remember context across a conversation or task. There are three types:</p>
+            <ul>
+              <li><strong>In-context memory:</strong> What's currently in the agent's "window" — recent messages and outputs.</li>
+              <li><strong>External memory:</strong> A vector database the agent can search (like a digital filing cabinet).</li>
+              <li><strong>Episodic memory:</strong> Logs of past sessions the agent can recall later.</li>
+            </ul>
+            <p>Without memory, an agent forgets everything between messages — like talking to someone with amnesia.</p>
+
+            <h3>Layer 4: Action (Output)</h3>
+            <p>The action layer is how the agent <strong>does things</strong> in the world. Actions go beyond generating text:</p>
+            <ul>
+              <li>🔍 Web search — finding current information</li>
+              <li>💻 Code execution — running Python, JavaScript, etc.</li>
+              <li>📁 File read/write — handling documents</li>
+              <li>🌐 API calls — fetching data from services</li>
+              <li>📧 Sending emails or messages</li>
+              <li>🖱️ Browser control — clicking, typing, navigating websites</li>
+            </ul>
+
+            <h2 id="ai-vs-chatbot">AI Agents vs. Chatbots: What's the Difference?</h2>
+            <blockquote>
+              "A chatbot answers your question. An AI agent completes your task."
+            </blockquote>
+            <p>Chatbots respond to a single query, then stop. AI agents can execute multi-step plans, use tools, verify their own outputs, and adapt when something goes wrong — making them far more powerful for real-world tasks.</p>
+
+            <h2 id="real-world-examples">Real-World AI Agent Examples (2026)</h2>
+            <p>Here are some real AI agent systems students encounter today:</p>
+            <ul>
+              <li><strong>ChatGPT with tools enabled</strong> — searches the web, runs code, reads files</li>
+              <li><strong>Google Gemini</strong> — multimodal agent that can analyze images and documents</li>
+              <li><strong>GitHub Copilot</strong> — coding agent that reads your whole codebase and makes multi-file edits</li>
+              <li><strong>Devin (Cognition AI)</strong> — autonomous software engineering agent</li>
+              <li><strong>AutoGPT / CrewAI</strong> — open-source multi-agent frameworks for custom use cases</li>
+            </ul>
+
+            <h2 id="conclusion">Conclusion</h2>
+            <p>AI agents are not magic — they are well-architected systems with four clear layers: Perception, Reasoning, Memory, and Action. Understanding this architecture helps you think critically about AI tools you use and opens the door to building your own AI-powered applications in the future.</p>
+            <p>As a student in 2026, learning about AI agents is one of the highest-value investments of your time. Explore the <a href="/categories/ai-technology.html">AI Technology category</a> for more in-depth articles on this topic.</p>
+
+          </div><!-- /.article-body -->
+
+          <!-- FAQ SECTION -->
+          <section class="faq-section" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is an AI agent?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                An AI agent is an autonomous system that perceives its environment, processes information, makes decisions, and takes actions to achieve a goal — without needing step-by-step human instructions for every decision.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the main components of an AI agent?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                A modern AI agent has four core components: a <strong>Perception Layer</strong> (reads inputs), a <strong>Reasoning Engine</strong> (the LLM brain that plans and decides), a <strong>Memory Module</strong> (stores context and past interactions), and an <strong>Action Layer</strong> (executes tools like web search or code execution).
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How are AI agents different from regular chatbots?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                Chatbots answer questions in a single turn. AI agents can execute multi-step tasks, use external tools (like searching the web or running code), maintain memory across sessions, and adapt when something goes wrong — making them capable of completing complex, real-world workflows.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can students build their own AI agents?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                Yes! Frameworks like LangChain, CrewAI, and AutoGPT make it possible for students with basic Python knowledge to build custom AI agents. Many universities also provide free API access to AI models through programs like Google for Startups and OpenAI's student grants.
+              </div>
+            </div>
+
+          </section>
+
+          <!-- INTERNAL LINKS -->
+          <section class="internal-links-section" aria-labelledby="related-links-heading">
+            <h3 id="related-links-heading">📚 Related Articles &amp; Resources</h3>
+            <ul>
+              <li><a href="/categories/ai-technology.html">AI Technology — Browse all AI articles</a></li>
+              <li><a href="/categories/research-databases.html">Research Databases — Find AI research papers</a></li>
+              <li><a href="/categories/student-opportunities.html">Student Opportunities — AI hackathons and competitions</a></li>
+              <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">arXiv — Latest AI research papers (free)</a></li>
+              <li><a href="https://paperswithcode.com" target="_blank" rel="noopener">Papers With Code — AI benchmarks and code</a></li>
+            </ul>
+          </section>
+
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" aria-label="Sidebar">
+          <div class="sidebar-widget">
+            <h4>AI Technology</h4>
+            <ul>
+              <li><a href="/blog/ai-technology/ai-agent-architecture.html">→ AI Agent Architecture</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h4>All Categories</h4>
+            <ul>
+              <li><a href="/categories/ai-technology.html">🤖 AI Technology</a></li>
+              <li><a href="/categories/internet-search-problems.html">🔍 Internet Search</a></li>
+              <li><a href="/categories/deep-web-resources.html">🌐 Deep Web Resources</a></li>
+              <li><a href="/categories/government-data.html">🏛️ Government Data</a></li>
+              <li><a href="/categories/research-databases.html">📚 Research Databases</a></li>
+              <li><a href="/categories/student-opportunities.html">🎯 Student Opportunities</a></li>
+              <li><a href="/categories/internet-mysteries.html">🕵️ Internet Mysteries</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget" style="background: var(--color-primary); color:#fff; border-color: var(--color-primary);">
+            <h4 style="color:#fff; border-color: rgba(255,255,255,0.2);">🚀 Explore AI Opportunities</h4>
+            <p style="color:rgba(255,255,255,0.9); font-size:0.875rem; margin:0 0 1rem;">Find hackathons and competitions where you can apply your AI knowledge.</p>
+            <a href="/categories/student-opportunities.html" class="btn" style="background:#fff; color:var(--color-primary); font-size:0.8rem; padding:0.4rem 0.9rem;">Browse Opportunities →</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Student Tech Project Hub · <a href="https://studentteckproject.in">studentteckproject.in</a></p>
+        <p><a href="/">Home</a> · <a href="/sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+      });
+    });
+  </script>
+</body>
+</html>
