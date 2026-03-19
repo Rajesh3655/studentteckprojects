@@ -124,6 +124,49 @@ Object.keys(categoryData).forEach(catSlug => {
             console.log(`Failed to match regex on ${catSlug}.html`);
         }
     }
+
+    // Update blog/[catSlug]/index.html
+    const blogIndexFile = path.join(baseDir, 'blog', catSlug, 'index.html');
+    if (fs.existsSync(blogIndexFile)) {
+        let content = fs.readFileSync(blogIndexFile, 'utf8');
+        
+        const blogCardsHtml = categoryData[catSlug].map((item, index) => {
+            const [slug, folder, tagClass, tagLabel, title, desc] = item;
+            const num = (index + 1).toString().padStart(2, '0');
+            const href = `./${slug}.html`;
+            
+            return `            <article class="article-card">
+              <div class="article-card-number">${num}</div>
+              <div class="article-card-body">
+                <div class="article-card-meta">
+                  <span class="tag ${tagClass}">${tagLabel}</span>
+                  <time datetime="2026-03-15">March 15, 2026</time>
+                  <span>5 min read</span>
+                </div>
+                <h2 style="font-size:1.25rem;"><a href="${href}">${title}</a></h2>
+                <p class="excerpt">${desc}</p>
+                <a href="${href}" class="read-more">Read article →</a>
+              </div>
+            </article>`;
+        }).join('\n\n');
+        
+        const regex = /(<div class="article-list">)[\s\S]*?(<\/div>\s*<\/div>\s*<aside class="sidebar">)/;
+        if (regex.test(content)) {
+            content = content.replace(regex, `$1\n\n${blogCardsHtml}\n\n          $2`);
+            fs.writeFileSync(blogIndexFile, content, 'utf8');
+            console.log(`Updated blog/${catSlug}/index.html`);
+        } else {
+            // Some blog index pages might not have the sidebar, let's use an alternate regex
+            const regexAlt = /(<div class="article-list">)[\s\S]*?(<\/div><!-- \/\.article-list -->)/;
+            if (regexAlt.test(content)) {
+                content = content.replace(regexAlt, `$1\n\n${blogCardsHtml}\n\n          $2`);
+                fs.writeFileSync(blogIndexFile, content, 'utf8');
+                console.log(`Updated blog/${catSlug}/index.html (alt regex)`);
+            } else {
+                console.log(`Failed to match regex on blog/${catSlug}/index.html`);
+            }
+        }
+    }
 });
 
 // Update the index.html with the latest 6 articles overall (using a mix of categories)
