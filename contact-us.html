@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Student Tech Project Hub</title>
+  <meta name="description" content="Get in touch with Student Tech Project Hub. We welcome questions, feedback, and student contributions to our technology knowledge base." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://studenttechprojects.in/contact-us.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.min.css" />
+  <style>
+    .contact-container {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 3rem;
+      background: var(--color-surface);
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--color-border);
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .contact-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+      font-family: var(--font-display);
+    }
+    .contact-header p {
+      color: var(--color-text-muted);
+      font-size: 1.1rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.75rem;
+      font-family: inherit;
+      background: var(--color-surface-2);
+      transition: all 0.2s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(79,110,247,0.1);
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 1.2rem;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+    .submit-btn:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(79,110,247,0.4);
+    }
+    .contact-info {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .info-item h4 {
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+      font-family: var(--font-display);
+    }
+    @media (max-width: 600px) {
+      .contact-container { padding: 1.5rem; margin: 2rem 1rem; }
+      .contact-info { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="./" class="site-logo">
+        <span class="logo-text">Student Tech Project Hub</span>
+      </a>
+      <nav class="site-nav" id="main-nav">
+        <a href="./">Home</a>
+        <a href="./categories/ai-technology.html">AI</a>
+        <a href="./categories/research-databases.html">Research</a>
+        <a href="./categories/student-opportunities.html">Opportunities</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="contact-container" style="animation: fadeUp 0.8s ease-out;">
+      <div class="contact-header">
+        <h1>Get in Touch</h1>
+        <p>Have a question about a technical project, or want to contribute an article? We'd love to hear from you.</p>
+      </div>
+
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" placeholder="What should we call you?" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" class="form-control">
+            <option>General Inquiry</option>
+            <option>Article Contribution</option>
+            <option>Feedback / Suggestion</option>
+            <option>Report a Bug</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" onclick="alert('Thank you! This is a demo. Please email us at: support@studenttechprojects.in'); return false;">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-item">
+          <h4>Email Support</h4>
+          <p>hello@studenttechprojects.in</p>
+        </div>
+        <div class="info-item">
+          <h4>Community Admin</h4>
+          <p>Student Circle, Tech Hub, India</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align: center; padding: 2.5rem 0;">
+      <p style="margin-bottom: 0.75rem;">© 2026 Student Tech Project Hub · studenttechprojects.in</p>
+      <div style="font-size: 0.9rem; opacity: 0.8;">
+        <a href="./" style="color: inherit; margin: 0 0.75rem;">Home</a>
+        <a href="./privacy-policy.html" style="color: inherit; margin: 0 0.75rem;">Privacy</a>
+        <a href="./terms-of-service.html" style="color: inherit; margin: 0 0.75rem;">Terms</a>
+        <a href="./archive.html" style="color: inherit; margin: 0 0.75rem;">Archive</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if (toggle && nav) toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
