@@ -781,9 +781,10 @@ pre code { background: none; color: inherit; padding: 0; }
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 2rem;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .page-btn {
@@ -1192,6 +1193,9 @@ pre code { background: none; color: inherit; padding: 0; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .section { padding: 3rem 0; }
+  
+  .pagination { gap: 0.35rem; }
+  .page-btn { min-width: 36px; height: 36px; font-size: 0.9rem; }
 }
 
 .article-body a { text-decoration: underline; font-weight: 500; color: var(--color-primary-dark); }
