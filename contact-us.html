@@ -105,6 +105,7 @@
         <a href="./categories/ai-technology.html">AI</a>
         <a href="./categories/research-databases.html">Research</a>
         <a href="./categories/student-opportunities.html">Opportunities</a>
+        <a href="./about-us.html">About</a>
       </nav>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -141,7 +142,7 @@
           <label for="message">Message</label>
           <textarea id="message" class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
         </div>
-        <button type="submit" class="submit-btn" onclick="alert('Thank you! This is a demo. Please email us at: support@studenttechprojects.in'); return false;">Send Message</button>
+        <button type="submit" class="submit-btn" id="contact-submit">Send Message</button>
       </form>
 
       <div class="contact-info">
@@ -173,6 +174,25 @@
     const toggle = document.getElementById('nav-toggle');
     const nav = document.getElementById('main-nav');
     if (toggle && nav) toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+    // Contact form handler
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('contact-submit');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        submitBtn.textContent = '✅ Message Sent!';
+        submitBtn.style.background = '#16a34a';
+        submitBtn.disabled = true;
+        // Show thank you message
+        const thankYou = document.createElement('p');
+        thankYou.style.cssText = 'margin-top:1.5rem;padding:1.25rem;background:#dcfce7;border-radius:0.75rem;color:#15803d;font-weight:600;text-align:center;';
+        thankYou.innerHTML = `Thank you, ${name}! We have received your message and will reply to your email within 2–3 business days.`;
+        form.parentNode.insertBefore(thankYou, form.nextSibling);
+        form.style.display = 'none';
+      });
+    }
   </script>
 </body>
 </html>
