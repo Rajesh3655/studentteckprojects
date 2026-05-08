@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdSense Readiness Audit — studenttechprojects.in</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0e1a;
+            --surface: #111827;
+            --surface2: #1a2235;
+            --border: #1f2f4a;
+            --accent: #3b82f6;
+            --accent2: #06b6d4;
+            --green: #10b981;
+            --yellow: #f59e0b;
+            --red: #ef4444;
+            --orange: #f97316;
+            --text: #e2e8f0;
+            --muted: #64748b;
+            --mono: 'IBM Plex Mono', monospace;
+            --sans: 'Sora', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--sans);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #0f1f3d 0%, #0a1628 50%, #071020 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 24px 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .header-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--accent2);
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        .header h1 {
+            font-size: clamp(22px, 5vw, 36px);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .header h1 span {
+            color: var(--accent);
+        }
+
+        .header-url {
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .score-grid {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .score-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 20px;
+            text-align: center;
+            min-width: 110px;
+        }
+
+        .score-card .val {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1;
+            font-family: var(--mono);
+        }
+
+        .score-card .lbl {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .val.pass {
+            color: var(--green);
+        }
+
+        .val.warn {
+            color: var(--yellow);
+        }
+
+        .val.fail {
+            color: var(--red);
+        }
+
+        .val.total {
+            color: var(--accent2);
+        }
+
+        /* MAIN LAYOUT */
+        .main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        /* OVERVIEW BAR */
+        .overview {
+            background: rgba(239, 68, 68, 0.07);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            border-left: 4px solid var(--red);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .overview-icon {
+            font-size: 22px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .overview-text strong {
+            color: #fca5a5;
+            font-size: 14px;
+        }
+
+        .overview-text p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        /* SECTION */
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: var(--accent);
+            color: #fff;
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 700;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            flex: 1;
+        }
+
+        .status-pill {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 1px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .pill-pass {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .pill-warn {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--yellow);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .pill-fail {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--red);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .pill-critical {
+            background: rgba(249, 115, 22, 0.15);
+            color: var(--orange);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+
+        /* FINDING CARD */
+        .finding {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .finding-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .dot-red {
+            background: var(--red);
+            box-shadow: 0 0 6px var(--red);
+        }
+
+        .dot-yellow {
+            background: var(--yellow);
+            box-shadow: 0 0 6px var(--yellow);
+        }
+
+        .dot-green {
+            background: var(--green);
+            box-shadow: 0 0 6px var(--green);
+        }
+
+        .finding-label {
+            font-weight: 600;
+            font-size: 13.5px;
+            color: #fff;
+        }
+
+        .finding-body {
+            padding: 14px 16px;
+        }
+
+        .finding-body p {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+
+        .finding-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FIX BLOCK */
+        .fix-block {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-top: 10px;
+        }
+
+        .fix-block-title {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent2);
+            margin-bottom: 8px;
+        }
+
+        .fix-block ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .fix-block li {
+            font-size: 12.5px;
+            color: #cbd5e1;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .fix-block li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* CODE BLOCK */
+        pre {
+            background: #060d1a;
+            border: 1px solid #1e3050;
+            border-radius: 8px;
+            padding: 14px 16px;
+            font-family: var(--mono);
+            font-size: 11.5px;
+            color: #7dd3fc;
+            overflow-x: auto;
+            margin-top: 10px;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        pre .cm {
+            color: #374f66;
+        }
+
+        pre .kw {
+            color: #93c5fd;
+        }
+
+        pre .str {
+            color: #86efac;
+        }
+
+        pre .tag {
+            color: #f9a8d4;
+        }
+
+        pre .attr {
+            color: #fde68a;
+        }
+
+        pre .val {
+            color: #6ee7b7;
+        }
+
+        /* PRIORITY TABLE */
+        .priority-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12.5px;
+            margin-top: 4px;
+        }
+
+        .priority-table th {
+            background: var(--surface2);
+            color: var(--muted);
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .priority-table td {
+            padding: 9px 12px;
+            border-bottom: 1px solid #0f1929;
+            color: #94a3b8;
+            vertical-align: top;
+        }
+
+        .priority-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .priority-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .priority-table td:first-child {
+            color: #fff;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .p-critical {
+            color: var(--orange) !important;
+            font-weight: 700 !important;
+            font-family: var(--mono);
+            font-size: 10px;
+        }
+
+        .p-high {
+            color: var(--red) !important;
+            font-weight: 700 !important;
+            font-family: var(--mono);
+            font-size: 10px;
+        }
+
+        .p-med {
+            color: var(--yellow) !important;
+            font-weight: 700 !important;
+            font-family: var(--mono);
+            font-size: 10px;
+        }
+
+        .p-low {
+            color: var(--green) !important;
+            font-weight: 700 !important;
+            font-family: var(--mono);
+            font-size: 10px;
+        }
+
+        /* CHECKLIST */
+        .checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 12.5px;
+            color: #94a3b8;
+            padding: 8px 12px;
+            background: var(--surface2);
+            border-radius: 7px;
+        }
+
+        .check-icon {
+            font-size: 14px;
+            flex-shrink: 0;
+            line-height: 1.4;
+        }
+
+        /* DIVIDER */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 28px 0;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid var(--border);
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-badge">Google AdSense Readiness Audit</div>
+        <h1>studenttechprojects<span>.in</span></h1>
+        <div class="header-url">https://www.studenttechprojects.in · Audit Date: May 2026</div>
+        <div class="score-grid">
+            <div class="score-card">
+                <div class="val fail">5</div>
+                <div class="lbl">Critical Issues</div>
+            </div>
+            <div class="score-card">
+                <div class="val warn">4</div>
+                <div class="lbl">Warnings</div>
+            </div>
+            <div class="score-card">
+                <div class="val pass">2</div>
+                <div class="lbl">Passing</div>
+            </div>
+            <div class="score-card">
+                <div class="val total">42%</div>
+                <div class="lbl">Ready Score</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="overview">
+            <div class="overview-icon">⚠️</div>
+            <div class="overview-text">
+                <strong>NOT READY — 5 critical blockers must be fixed before applying.</strong>
+                <p>The site has good niche content and a clean topic focus, which is a strong foundation. However,
+                    several structural, content quality, and policy compliance issues will cause an automatic AdSense
+                    rejection. Fix issues in Priority order below.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 1 -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-num">1</div>
+                <div class="section-title">Crawlability — Site Returning 403 Error</div>
+                <span class="status-pill pill-critical">CRITICAL</span>
+            </div>
+
+            <div class="finding">
+                <div class="finding-head">
+                    <div class="dot dot-red"></div>
+                    <div class="finding-label">Googlebot is likely being blocked (403 Forbidden)</div>
+                </div>
+                <div class="finding-body">
+                    <p>When crawled, the site returns a <strong>403 Client Error</strong>. This means Cloudflare (or
+                        your hosting firewall) is blocking bot traffic. If Google cannot crawl your pages, your site
+                        <strong>cannot be indexed, cannot be reviewed by AdSense</strong>, and cannot show ads.</p>
+                    <div class="fix-block">
+                        <div class="fix-block-title">→ How to Fix</div>
+                        <ul>
+                            <li>In Cloudflare dashboard → Security → Bots → Enable "Allow verified bots" (Googlebot,
+                                AdsBot-Google)</li>
+                            <li>Go to Cloudflare → Security → WAF → ensure no rule blocks "Googlebot" or bots with good
+                                reputation</li>
+                            <li>Create a <code>robots.txt</code> at <code>studenttechprojects.in/robots.txt</code> and
+                                ensure it does NOT disallow Googlebot</li>
+                        </ul>
+                    </div>
+                    <pre><span class="cm"># /robots.txt — correct setup</span>
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+Sitemap: https://www.studenttechprojects.in/sitemap.xml</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-num">2</div>
+                <div class="section-title">Content Quality — AI-Generated Filler Content Detected</div>
+                <span class="status-pill pill-critical">CRITICAL</span>
+            </div>
+
+            <div class="finding">
+                <div class="finding-head">
+                    <div class="dot dot-red"></div>
+                    <div class="finding-label">At least one article contains low-value, padded AI content</div>
+                </div>
+                <div class="finding-body">
+                    <p>The article <em>"How Google Indexing Works"</em> was found in Google's index with content like:
+                        <em>"The implications of Search Problems extend far beyond initial estimates… consider the
+                            structural dynamics — it demonstrates a clear trajectory towards decentralization…"</em> —
+                        these are hallmarks of AI-generated padding with no real informational value. Google AdSense
+                        reviewers specifically check for this, and it is grounds for immediate rejection under their
+                        "Valuable Inventory" policy.</p>
+                    <div class="fix-block">
+                        <div class="fix-block-title">→ How to Fix</div>
+                        <ul>
+                            <li>Audit every published article. Remove or substantially rewrite any article containing
+                                vague, filler sentences that don't explain anything concrete</li>
+                            <li>Each article must have: a clear intro, specific factual explanations, real examples, and
+                                actionable takeaways</li>
+                            <li>Target minimum 800 genuine words per article — not padded with repetition</li>
+                            <li>Do not publish AI-drafted content without thorough human review and rewriting</li>
+                            <li>The internship article (AI &amp; Tech Internships) is much better — use that as your
+                                content standard</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-num">3</div>
+                <div class="section-title">Required Pages — About, Contact, Privacy Policy, Terms</div>
+                <span class="status-pill pill-critical">CRITICAL</span>
+            </div>
+
+            <div class="finding">
+                <div class="finding-head">
+                    <div class="dot dot-red"></div>
+                    <div class="finding-label">Required trust pages cannot be confirmed as accessible</div>
+                </div>
+                <div class="finding-body">
+                    <p>AdSense requires an accessible <strong>About</strong>, <strong>Contact</strong>, <strong>Privacy
+                            Policy</strong>, and <strong>Terms of Use</strong> page. These pages must be linked from
+                        every page (footer or navigation), properly indexed, and contain complete information. The
+                        site's 403 block prevented verification of these pages.</p>
+                    <div class="fix-block">
+                        <div class="fix-block-title">→ Minimum Required Content for Each Page</div>
+                        <ul>
+                            <li><strong>About:</strong> Who runs the site, what is it about, who is the target audience,
+                                why it was created</li>
+                            <li><strong>Contact:</strong> A working email address or contact form. Physical address
+                                optional but increases trust</li>
+                            <li><strong>Privacy Policy:</strong> Must explicitly mention Google AdSense/cookies,
+                                third-party ad serving, and how to opt out</li>
+                            <li><strong>Terms of Use:</strong> Disclaimers, user responsibilities, content ownership
+                            </li>
+                            <li>All four pages must appear in your footer and/or navigation on every page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="finding">
+                <div class="finding-head">
+                    <div class="dot dot-red"></div>
+                    <div class="finding-label">Privacy Policy must contain AdSense-specific disclosures</div>
+                </div>
+                <div class="finding-body">
+                    <p>Google requires your Privacy Policy to explicitly state that third parties (Google) use cookies
+                        for advertising, that users can opt out via Google Ads Settings, and that you use Google
+                        AdSense. This is a hard requirement per AdSense Program Policies.</p>
+                    <div class="fix-block">
+                        <div class="fix-block-title">→ Copy this paragraph into your Privacy Policy</div>
+                    </div>
+                    <pre><span class="cm"><!-- Add this section to your Privacy Policy page --></span>
+
+<span class="tag">&lt;h2&gt;</span>Advertising &amp; Cookies<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+  This website uses Google AdSense, a third-party advertising service by Google LLC.
+  Google uses cookies (including the DoubleClick cookie) to serve ads based on a
+  user's prior visits to this website and other websites on the internet.
+  These advertising cookies allow Google and its partners to serve ads to you
+  based on your visit to our site and/or other sites on the internet.
+<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+  You may opt out of personalized advertising by visiting
+  <span class="tag">&lt;a href=</span><span class="str">"https://www.google.com/settings/ads"</span><span class="tag">&gt;</span>Google Ads Settings<span class="tag">&lt;/a&gt;</span>.
+  You can also opt out of third-party vendor cookies via
+  <span class="tag">&lt;a href=</span><span class="str">"http://www.aboutads.info/choices/"</span><span class="tag">&gt;</span>aboutads.info<span class="tag">&lt;/a&gt;</span>.
+<span class="tag">&lt;/p&gt;</span></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4 -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-num">4</div>
+                <div class="section-title">AdSense Code Placement</div>
+                <span class="status-pill pill-warn">TO VERIFY</span>
+            </div>
+
+            <div class="finding">
+                <div class="finding-head">
+                    <div class="dot dot-yellow"></div>
+                    <div class="finding-label">AdSense auto-ads code must be in &lt;head&gt; on every page</div>
+                </div>
+                <div class="finding-body">
+                    <p>The AdSense auto-ads snippet must be placed inside the <code>&lt;head&gt;</code> tag of your
+                        site's HTML on <strong>every page</strong> — not just the homepage. If using a CMS, place it in
+                        your global header template.</p>
+                    <div class="fix-block">
+                        <div class="fix-block-title">→ Correct AdSense Code Placement</div>
+                    </div>
+                    <pre><span class="tag">&lt;head&gt;</span>
+  <span class="cm">&lt;!-- Other meta tags... --&gt;</span>
+
+  <span class="cm">&lt;!-- Google AdSense Auto Ads — place in &lt;head&gt; on ALL pages --&gt;</span>
+  <span class="tag">&lt;script</span> <span class="attr">async</span>
+    <span class="attr">src=</span><span class="str">"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"</span>
+    <span class="attr">crossorigin=</span><span class="str">"anonymous"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;/script&gt;</span>
+
+  <span class="cm">&lt;!-- Replace XXXXXXXXXXXXXXXX with your actual publisher ID --&gt;</span>
+<span class="tag">&lt;/head&gt;</span></pre>
+                    <div class="fix-block" style="margin-top:10px;">
+                        <div class="fix-block-title">→ Ad Placement Rules (Do NOT violate)</div>
+                        <ul>
+                            <li>Never place ads on pages with no content (e.g., empty category pages)</li>
+                            <li>Never place ads in pop-ups, iframes, or emails</li>
+                            <li>Do not place ads near navigation buttons where accidental clicks occur</li>
+                            <li>Max 3 display ad units per page (best practice; AdSense no longer has a hard limit but
+                                quality is enforced)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5 -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-num">5</div>
+                <div class="section-title">HTTPS &amp; Page Speed</div>
+                <span class="status-pill pill-pass">LIKELY OK</span>
+            </div>
+
+            <div class="finding">
+                <div class="finding-head">
+                    <div class="dot dot-green"></div>
+                    <div class="finding-label">Site appears to be on HTTPS — verify no mixed content</div>
+                </div>
+                <div class="finding-body">
+                    <p>The site loads over HTTPS which is required. However, ensure there are no mixed-content warnings
+                        (HTTP resources loaded on HTTPS pages). Use Cloudflare's "Always Use HTTPS" setting.</p>
+                    <div class="fix-block">
+                        <div class="fix-block-title">→ Speed Optimisations to Apply</div>
+                        <ul>
+                            <li>Enable Cloudflare caching with "Cache Level: Standard" and "Browser Cache TTL: 4 hours"
+                            </li>
+                            <li>Enable Cloudflare "Auto Minify" for

@@ -34,6 +34,8 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="theme-color" content="#4f6ef7" />
+  <!-- AdSense auto-ads: required to be present inside <head> on all pages -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -123,6 +125,15 @@
             <li><a href="./terms-of-service.html">Terms of Service</a></li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Quick Links</h3>
+          <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="./about-us.html">About Us</a></li>
+            <li><a href="./contact-us.html">Contact Us</a></li>
+            <li><a href="./archive.html">Full Article Archive</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>© 2026 Student Tech Project Hub · <a href="https://studenttechprojects.in">studenttechprojects.in</a></p>
@@ -145,11 +156,6 @@
     gtm.async = true;
     document.head.appendChild(gtm);
 
-    const ads = document.createElement('script');
-    ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296";
-    ads.async = true;
-    ads.crossOrigin = "anonymous";
-    document.head.appendChild(ads);
   }, 3500);
 </script>
 </body>
