@@ -1,17 +1,10 @@
-# robots.txt for studenttechprojects.in
-# Generated for SEO blog website
-
+# Allow all search engines to crawl
 User-agent: *
-Allow: /
+Disallow:
 
+# Allow Googlebot explicitly
 User-agent: Googlebot
-Allow: /
+Disallow:
 
-User-agent: AdsBot-Google
-Allow: /
-
-# Block admin or drafts folders (add here as needed)
-# Disallow: /drafts/
-
-# Sitemap location
-Sitemap: https://www.studenttechprojects.in/sitemap.xml
+# Point to your sitemap
+Sitemap: https://studentteckprojects.in/sitemap.xml
