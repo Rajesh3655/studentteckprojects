@@ -87,6 +87,7 @@ data.forEach(t => {
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="google-adsense-account" content="ca-pub-2919350397675296">
   <title>${title} - Student Tech Project Hub</title>
   <meta name="description" content="${desc}"/>
   <meta name="robots" content="index,follow"/>

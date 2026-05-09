@@ -35,7 +35,8 @@ function getHtmlFiles(dir) {
 }
 getHtmlFiles(baseDir);
 
-const fontLink = `<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+const headInjections = `<meta name="google-adsense-account" content="ca-pub-2919350397675296">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap"></noscript>`;
 
 const delayedScripts = `
@@ -75,9 +76,14 @@ htmlFiles.forEach(file => {
     content = content.replace(/<!-- Google AdSense -->/g, '');
     content = content.replace(/<script async src="https:\/\/pagead2\.googlesyndication\.com.*?<\/script>/is, '');
 
-    // Add font preload right before style.min.css
-    if (!content.includes('as="style" href="https://fonts.googleapis.com')) {
-        content = content.replace(/(<link rel="stylesheet" href="[^"]*style\.min\.css"\s*\/?>)/, fontLink + '\n  $1');
+    // Add font preload and AdSense meta tag right before style.min.css
+    if (!content.includes('name="google-adsense-account"')) {
+        // If the old fontLink is there, replace it alongside adding the meta tag
+        if (content.includes('as="style" href="https://fonts.googleapis.com')) {
+            content = content.replace(/<link rel="preload" as="style" href="https:\/\/fonts\.googleapis\.com.*?<\/noscript>/is, headInjections);
+        } else {
+            content = content.replace(/(<link rel="stylesheet" href="[^"]*style\.min\.css"\s*\/?>)/, headInjections + '\n  $1');
+        }
     }
 
     // Fix H5 to H3 in footer for accessibility sequential headers
