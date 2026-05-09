@@ -4,11 +4,13 @@ const path = require('path');
 const base = "C:\\Users\\Rajesh k\\Desktop\\studenttechproject in\\studentteckproject-site";
 const domain = "https://studenttechprojects.in";
 
-const ga = `  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBHBBYC1KK"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-VBHBBYC1KK");</script>`;
-const ads = `  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296" crossorigin="anonymous"></script>`;
+const lazyScripts = `  <script>
+    setTimeout(() => {
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-VBHBBYC1KK");
+      const gtm=document.createElement('script');gtm.src="https://www.googletagmanager.com/gtag/js?id=G-VBHBBYC1KK";gtm.async=true;document.head.appendChild(gtm);
+      const ads=document.createElement('script');ads.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296";ads.async=true;ads.crossOrigin="anonymous";document.head.appendChild(ads);
+    }, 3500);
+  </script>`;
 
 const data = [
   // Search Problems
@@ -83,8 +85,6 @@ data.forEach(t => {
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
-${ga}
-${ads}
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>${title} - Student Tech Project Hub</title>
@@ -96,7 +96,9 @@ ${ads}
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="${url}"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap"/></noscript>
   <link rel="stylesheet" href="/style.css"/>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"${title}","description":"${desc}","author":{"@type":"Organization","name":"Student Tech Project Hub"},"publisher":{"@type":"Organization","name":"Student Tech Project Hub","url":"https://studenttechprojects.in"},"datePublished":"2026-03-15","mainEntityOfPage":{"@type":"WebPage","@id":"${url}"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"${q1}","acceptedAnswer":{"@type":"Answer","text":"${a1}"}},{"@type":"Question","name":"${q2}","acceptedAnswer":{"@type":"Answer","text":"${a2}"}},{"@type":"Question","name":"${q3}","acceptedAnswer":{"@type":"Answer","text":"${a3}"}}]}</script>
@@ -111,6 +113,7 @@ ${ads}
   if(t&&n)t.addEventListener('click',()=>n.classList.toggle('open'));
   document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const i=b.closest('.faq-item'),o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open');});});
 </script>
+${lazyScripts}
 </body></html>`;
 
   const dirPath = path.join(base, folder);

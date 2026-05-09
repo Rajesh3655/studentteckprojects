@@ -1,10 +1,20 @@
+<<<<<<< HEAD
+=======
+# Allow all search engines to crawl
+>>>>>>> 1753ee56b3d5b0834052a13b7d6a04cee62b6e17
 User-agent: *
-Allow: /
+Disallow:
 
+# Allow Googlebot explicitly
 User-agent: Googlebot
-Allow: /
+Disallow:
 
+<<<<<<< HEAD
 User-agent: AdsBot-Google
 Allow: /
 
 Sitemap: https://www.studenttechprojects.in/sitemap.xml
+=======
+# Point to your sitemap
+Sitemap: https://studentteckprojects.in/sitemap.xml
+>>>>>>> 1753ee56b3d5b0834052a13b7d6a04cee62b6e17
