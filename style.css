@@ -93,6 +93,7 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   min-height: 100vh;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 

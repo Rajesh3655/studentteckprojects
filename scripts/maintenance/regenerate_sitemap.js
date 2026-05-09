@@ -21,6 +21,30 @@ function generateSitemap() {
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://studenttechprojects.in/about-us.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://studenttechprojects.in/contact-us.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://studenttechprojects.in/privacy-policy.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://studenttechprojects.in/terms-of-service.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>`;
 
   // Categories

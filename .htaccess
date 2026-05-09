@@ -1,0 +1,9 @@
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# Force HTTPS (Recommended by AdSense Readiness Audit)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
