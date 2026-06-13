@@ -581,6 +581,7 @@ pre code { background: none; color: inherit; padding: 0; }
   gap: 1rem;
   text-decoration: none;
   box-shadow: var(--shadow-sm);
+  cursor: pointer;
 }
 
 /* Glossy top accent bar */
@@ -665,6 +666,11 @@ pre code { background: none; color: inherit; padding: 0; }
   transition: var(--transition);
 }
 .category-card:hover .cat-arrow { color: var(--color-primary); transform: translateX(4px); }
+.category-card:focus-visible,
+.article-card:focus-visible {
+  outline: 3px solid rgba(79, 110, 247, 0.35);
+  outline-offset: 3px;
+}
 
 /* Feature cards (why section) */
 .feature-card {
@@ -720,6 +726,7 @@ pre code { background: none; color: inherit; padding: 0; }
   align-items: flex-start;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
+  cursor: pointer;
 }
 
 .article-card:hover {

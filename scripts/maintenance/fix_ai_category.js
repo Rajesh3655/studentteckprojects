@@ -17,7 +17,22 @@ const articles = [
   { title: "Hidden Risks of AI That Nobody Talks About", slug: "hidden-risks-of-ai", desc: "Beyond the sci-fi tropes of robot takeovers, discover the real, immediate, and hidden risks that artificial intelligence poses to society today." }
 ];
 
+const nativeBanner = `
+      <div class="ad-native-banner" style="margin: 2rem 0;">
+        <script async="async" data-cfasync="false" src="https://pl29731158.effectivecpmnetwork.com/3c79652616894924d5e34506e5ae7976/invoke.js"></script>
+        <div id="container-3c79652616894924d5e34506e5ae7976"></div>
+      </div>`;
+
+const popunderScript = '<script src="https://pl29731159.effectivecpmnetwork.com/ba/a5/86/baa5864798a800127efce1373c3d2a4c.js"></script>';
+
 let categoryHTML = fs.readFileSync(CATEGORY_HTML_PATH, 'utf-8');
+if (!categoryHTML.includes('baa5864798a800127efce1373c3d2a4c.js')) {
+    categoryHTML = categoryHTML.replace('</head>', `  ${popunderScript}\n</head>`);
+}
+if (!categoryHTML.includes('container-3c79652616894924d5e34506e5ae7976')) {
+    categoryHTML = categoryHTML.replace('</div>\n      <div class="site-content">', `</div>${nativeBanner}\n      <div class="site-content">`);
+    categoryHTML = categoryHTML.replace('</div>\r\n      <div class="site-content">', `</div>${nativeBanner}\r\n      <div class="site-content">`);
+}
 
 let newCards = '';
 let dateStr = "2026-03-24"; 

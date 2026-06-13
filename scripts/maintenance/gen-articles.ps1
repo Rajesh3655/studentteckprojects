@@ -1,6 +1,6 @@
 $base = "C:\Users\Rajesh k\Desktop\studenttechproject in\studentteckproject-site"
 $domain = "https://studenttechprojects.in"
-$lazyScripts = "<script>setTimeout(()=>{window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VBHBBYC1KK');const gtm=document.createElement('script');gtm.src='https://www.googletagmanager.com/gtag/js?id=G-VBHBBYC1KK';gtm.async=true;document.head.appendChild(gtm);const ads=document.createElement('script');ads.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296';ads.async=true;ads.crossOrigin='anonymous';document.head.appendChild(ads);}, 3500);</script>"
+$lazyScripts = "<script>setTimeout(()=>{window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VBHBBYC1KK');const gtm=document.createElement('script');gtm.src='https://www.googletagmanager.com/gtag/js?id=G-VBHBBYC1KK';gtm.async=true;document.head.appendChild(gtm);const ads=document.createElement('script');ads.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296';ads.async=true;ads.crossOrigin='anonymous';document.head.appendChild(ads);}, 3500);</script><script src=`"https://pl29731161.effectivecpmnetwork.com/51/c6/20/51c620f0d6c70fe9e1688eb5a852e94b.js`"></script>"
 
 function Write-Article {
   param([array]$t)

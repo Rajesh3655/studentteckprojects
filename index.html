@@ -74,6 +74,7 @@
   <meta name="theme-color" content="#4f6ef7" />
   <!-- AdSense auto-ads: required to be present inside <head> on all pages -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919350397675296" crossorigin="anonymous"></script>
+  <script src="https://pl29731159.effectivecpmnetwork.com/ba/a5/86/baa5864798a800127efce1373c3d2a4c.js"></script>
 </head>
 <body>
 
@@ -401,7 +402,8 @@
       <div class="footer-bottom">
         <p>© 2026 Student Tech Project Hub · <a href="https://studenttechprojects.in">studenttechprojects.in</a></p>
         <p>Built for Indian students · Static SEO Site · Free to Use❤️</p>
-      </div>
+      
+        <p class="footer-sponsored"><a href="https://www.effectivecpmnetwork.com/b1i76bkcb?key=32d73fb96b5c496045994fa3d23c6acc" target="_blank" rel="noopener sponsored">Sponsored Link</a></p></div>
     </div>
   </footer>
 
@@ -415,6 +417,29 @@
         toggle.setAttribute('aria-expanded', isOpen);
       });
     }
+
+    // Make home page cards behave like links
+    const clickableCardSelectors = '.category-card, .article-card';
+    document.querySelectorAll(clickableCardSelectors).forEach((card) => {
+      const link = card.querySelector('a[href]');
+      if (!link) return;
+
+      card.style.cursor = 'pointer';
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'link');
+
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a, button')) return;
+        window.location.href = link.href;
+      });
+
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          window.location.href = link.href;
+        }
+      });
+    });
   </script>
 
 <script>
@@ -432,5 +457,6 @@
 
   }, 3500);
 </script>
+  <script src="https://pl29731161.effectivecpmnetwork.com/51/c6/20/51c620f0d6c70fe9e1688eb5a852e94b.js"></script>
 </body>
 </html>

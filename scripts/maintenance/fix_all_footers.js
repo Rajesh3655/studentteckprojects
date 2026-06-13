@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT_DIR = 'c:\\Users\\Rajesh k\\Desktop\\studenttechproject in\\studentteckproject-site';
+const SMARTLINK_HTML = `<p class="footer-sponsored"><a href="https://www.effectivecpmnetwork.com/b1i76bkcb?key=32d73fb96b5c496045994fa3d23c6acc" target="_blank" rel="noopener sponsored">Sponsored Link</a></p>`;
 
 const footerHome = `<footer class="site-footer" role="contentinfo">
     <div class="container">
@@ -46,6 +47,7 @@ const footerHome = `<footer class="site-footer" role="contentinfo">
       <div class="footer-bottom">
         <p>© 2026 Student Tech Project Hub · <a href="https://studenttechprojects.in">studenttechprojects.in</a></p>
         <p>Built for Indian students · Static SEO Site · Free to Use</p>
+        ${SMARTLINK_HTML}
       </div>
     </div>
   </footer>`;
@@ -85,6 +87,7 @@ function fixCategories() {
       <div class="footer-bottom">
         <p>© 2026 Student Tech Project Hub · <a href="https://studenttechprojects.in">studenttechprojects.in</a></p>
         <p><a href="../">Home</a> · <a href="../archive.html">Full Archive</a> · <a href="../categories/ai-technology.html">AI</a> · <a href="../categories/student-opportunities.html">Opportunities</a></p>
+        ${SMARTLINK_HTML}
       </div>
     </div>
   </footer>`;
@@ -107,6 +110,7 @@ function fixTemplate() {
       <div class="footer-bottom">
         <p>© 2026 Student Tech Project Hub · <a href="https://studenttechprojects.in">studenttechprojects.in</a></p>
         <p><a href="../../">Home</a> · <a href="../../archive.html">Full Archive</a> · <a href="../../categories/ai-technology.html">AI</a> · <a href="../../categories/student-opportunities.html">Opportunities</a></p>
+        ${SMARTLINK_HTML}
       </div>
     </div>
   </footer>`;
